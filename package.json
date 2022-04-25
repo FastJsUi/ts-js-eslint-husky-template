@@ -1,0 +1,42 @@
+{
+    "name": "dev-template",
+    "version": "1.0.0",
+    "description": "ts+js+eslint+husky dev template",
+    "keywords": [
+        "fastjs"
+    ],
+    "license": "MIT",
+    "author": "aipeli && FastJsUi Team",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/FastJsUi/ts-js-eslint-husky-template.git"
+    },
+    "main": "./dist/index.min.js",
+    "files": [
+        "dist"
+    ],
+    "bugs": {
+        "url": "https://github.com/FastJsUi/ts-js-eslint-husky-template/issues"
+    },
+    "homepage": "https://github.com/FastJsUi/ts-js-eslint-husky-template#readme",
+    "scripts": {
+        "eslint": "eslint .",
+        "eslint:fix": "eslint . --fix",
+        "prepare": "husky install",
+        "precommit": "lint-staged"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^16.2.3",
+        "@commitlint/config-conventional": "^16.2.1",
+        "@fastjsui/eslint-config-basic": "^0.0.1",
+        "eslint": "^8.13.0",
+        "husky": "^7.0.4",
+        "lint-staged": "^12.3.7"
+    },
+    "lint-staged": {
+        "src/**/*.js": "eslint . --fix"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
